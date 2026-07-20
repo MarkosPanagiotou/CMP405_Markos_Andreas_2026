@@ -1,0 +1,108 @@
+[1/6] Loaded MNIST
+[2/6] A1 complete
+[3/6] A2 complete
+[4/6] PCA complete
+[5/6] K-Means complete
+[5a] split complete
+[5b] 5pct baseline complete
+[5c] LP fitting
+[5d] LP fit complete
+[5e] LP predict complete
+[5f] LP outputs saved
+[6/6] Semi-supervised complete
+{
+  "supervised_random_forest": {
+    "accuracy": 0.9707,
+    "precision_macro": 0.9705266284233052,
+    "recall_macro": 0.9704315815377129,
+    "f1_macro": 0.9704635070001654
+  },
+  "external_digits": {
+    "accuracy": 0.65,
+    "precision_macro": 0.55,
+    "recall_macro": 0.65,
+    "f1_macro": 0.5633333333333332
+  },
+  "pca_explained_variance_ratio_sum": 0.6435713768005371,
+  "kmeans": {
+    "k": 10,
+    "inertia_sse": 1245148.125,
+    "sse_note": "For Euclidean K-Means, sklearn inertia is the within-cluster Sum of Squared Errors (SSE).",
+    "cohesion_mean_distance_to_centroid": 4.468406677246094,
+    "cohesion_mean_squared_distance": 20.75246875,
+    "separation_min_centroid_distance": 3.682657480239868,
+    "separation_mean_centroid_distance": 5.58864164352417,
+    "silhouette_coefficient_sample_3000": 0.12574368715286255,
+    "posthoc_cluster_purity": 0.5932,
+    "posthoc_mapped_accuracy_test": 0.5954,
+    "posthoc_cluster_to_digit_map": {
+      "0": 4,
+      "1": 2,
+      "2": 3,
+      "3": 8,
+      "4": 6,
+      "5": 1,
+      "6": 7,
+      "7": 0,
+      "8": 7,
+      "9": 0
+    }
+  },
+  "semi_supervised_split": {
+    "labeled_count": 3000,
+    "unlabeled_count": 57000,
+    "labeled_fraction": 0.05,
+    "labeled_count_by_digit": {
+      "0": 296,
+      "1": 337,
+      "2": 298,
+      "3": 307,
+      "4": 292,
+      "5": 271,
+      "6": 296,
+      "7": 313,
+      "8": 293,
+      "9": 297
+    }
+  },
+  "supervised_5pct_baseline": {
+    "accuracy": 0.9327,
+    "precision_macro": 0.9324647433722859,
+    "recall_macro": 0.931707376908441,
+    "f1_macro": 0.9318432046613534
+  },
+  "label_propagation": {
+    "accuracy": 0.9567,
+    "precision_macro": 0.9572951257821662,
+    "recall_macro": 0.956211564354156,
+    "f1_macro": 0.9564898900687542,
+    "n_iter": 400,
+    "kernel": "knn",
+    "n_neighbors": 7,
+    "max_iter": 500
+  },
+  "clustering_plus_cluster_labeling": {
+    "accuracy": 0.5954,
+    "precision_macro": 0.5100821959788687,
+    "recall_macro": 0.5844280929871051,
+    "f1_macro": 0.5332108857479398,
+    "cluster_to_digit_map_from_5pct_labels": {
+      "0": 4,
+      "1": 2,
+      "2": 3,
+      "3": 8,
+      "4": 6,
+      "5": 1,
+      "6": 7,
+      "7": 0,
+      "8": 7,
+      "9": 0
+    }
+  },
+  "timings_seconds": {
+    "supervised_fit_seconds": 19.327638864517212,
+    "pca_fit_transform_seconds": 1.3387665748596191,
+    "kmeans_fit_seconds": 0.40912771224975586,
+    "label_propagation_fit_seconds": 4.881099462509155
+  }
+}
